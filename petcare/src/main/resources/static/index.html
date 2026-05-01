@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AC2 Backend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+    <div>
+        <h1>AC2 - Projetos e PetCare</h1>
+        <p>API Spring Boot com JPA, regras de negocio e frontend simples.</p>
+    </div>
+    <a href="/h2-console" target="_blank">H2 Console</a>
+</header>
+
+<main class="layout">
+    <section class="panel">
+        <div class="panel-title">
+            <h2>Projetos</h2>
+            <button id="btnProjetos" type="button">Atualizar</button>
+        </div>
+
+        <form id="formProjeto" class="form-grid">
+            <label>
+                Nome
+                <input name="nome" required placeholder="Novo app interno">
+            </label>
+            <label>
+                Inicio
+                <input name="dataInicio" type="date" required>
+            </label>
+            <label>
+                Fim
+                <input name="dataFim" type="date">
+            </label>
+            <label>
+                Orcamento
+                <input name="orcamento" type="number" step="0.01" placeholder="10000">
+            </label>
+            <label class="wide">
+                Descricao
+                <input name="descricao" placeholder="Objetivo do projeto">
+            </label>
+            <button class="wide primary" type="submit">Cadastrar projeto</button>
+        </form>
+
+        <div id="projetos" class="list"></div>
+    </section>
+
+    <section class="panel">
+        <div class="panel-title">
+            <h2>Vinculo funcionario</h2>
+        </div>
+        <form id="formVinculo" class="form-grid two">
+            <label>
+                Projeto ID
+                <input name="projetoId" type="number" required value="1">
+            </label>
+            <label>
+                Funcionario ID
+                <input name="funcionarioId" type="number" required value="1">
+            </label>
+            <button class="wide" type="submit">Vincular</button>
+        </form>
+        <pre id="resultadoVinculo"></pre>
+    </section>
+
+    <section class="panel">
+        <div class="panel-title">
+            <h2>PetCare</h2>
+            <button id="btnPetcare" type="button">Carregar dados</button>
+        </div>
+        <form id="formConsulta" class="form-grid two">
+            <label>
+                Animal ID
+                <input name="animalId" type="number" required value="1">
+            </label>
+            <label>
+                Veterinario ID
+                <input name="veterinarioId" type="number" required value="1">
+            </label>
+            <label class="wide">
+                Data e hora
+                <input name="dataHora" type="datetime-local" required>
+            </label>
+            <label class="wide">
+                Motivo
+                <input name="motivo" required value="Retorno">
+            </label>
+            <button class="wide primary" type="submit">Agendar consulta</button>
+        </form>
+        <pre id="petcare"></pre>
+    </section>
+</main>
+
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
