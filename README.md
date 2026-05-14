@@ -79,15 +79,4 @@ PetCare:
 cd petcare
 .\mvnw.cmd test
 ```
-
-Os testes verificam se o Spring sobe corretamente e se as regras de agenda/especialidade do PetCare funcionam.
-
-## Explicacao curta para apresentar
-
-- `Controller`: recebe a requisicao HTTP e chama o service.
-- `Service`: concentra as regras de negocio e validacoes.
-- `Repository`: conversa com o banco usando Spring Data JPA.
-- `Model`: representa as tabelas do banco.
-- `DTO`: representa os dados que chegam nas requisicoes.
-- `ExceptionHandler`: transforma erros do sistema em respostas HTTP claras.
 # Ac2BackEnd
