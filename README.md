@@ -1,4 +1,8 @@
 # AC2 - Projetos e PetCare
+Feito por:
+Júlia Moraes Martins, RA 248065
+
+Gabriel Capelini de Oliveira, RA 247602
 
 Projeto simples em Spring Boot para apresentar a AC2 de Back-End.
 
