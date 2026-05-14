@@ -11,6 +11,9 @@ import org.springframework.data.repository.query.Param;
 
 public interface ProjetoRepository extends JpaRepository<Projeto, Long> {
     @EntityGraph(attributePaths = "funcionarios")
+    List<Projeto> findAll();
+
+    @EntityGraph(attributePaths = "funcionarios")
     Optional<Projeto> findWithFuncionariosById(Long id);
 
     @Query("""
